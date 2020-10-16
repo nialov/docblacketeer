@@ -8,6 +8,10 @@ mypy = "*"
 pylama = "*"
 hypothesis = "*"
 pytest = "*"
+coverage = "*"
+pipenv-to-requirements = "*"
+tox = "*"
+pipenv-setup = "*"
 
 [packages]
 black = "*"
@@ -15,3 +19,6 @@ click = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

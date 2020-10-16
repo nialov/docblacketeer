@@ -20,7 +20,7 @@ def test_command_line_integration(stdin_input, expected):
         # Check that exit code is 0 (i.e. ran succesfully.)
         assert result.exit_code == 0
         # Checks if output path is printed
-        assert str(">>>") in result.output
+        assert ">>>" in result.output
 
 
 def test_command_line_integration_no_stdin():

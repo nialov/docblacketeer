@@ -17,6 +17,6 @@ def docblacketeer():
     4
 
     """
-    read_stdin = click.get_text_stream("stdin").read()
-    sanitized = sanitize_doctest_code(read_stdin)
+    read_stdin: io.TextIOWrapper = click.get_text_stream("stdin")
+    sanitized: str = sanitize_doctest_code(read_stdin.read())
     click.echo(sanitized, nl=False)

@@ -1,2 +1,6 @@
 docblacketeer/__pycache__
 tests/__pycache__
+docblacketeer.egg-info/
+dev
+.coverage
+.tox
