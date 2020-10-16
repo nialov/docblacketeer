@@ -115,6 +115,11 @@ def sanitize_doctest_code(code_to_sanitize: str) -> str:
             f"Did not receive string data in sanitize_doctest_code."
             f"code_to_sanitize: {code_to_sanitize}, Type: {type(code_to_sanitize)}]"
         )
+    if ARROWS not in code_to_sanitize:
+        raise CodeParseError(
+            "code_to_sanitize does not contain >>>. "
+            "Cannot interpret as doctest code."
+        )
     # Split passed string data into lines.
     split_to_lines = code_to_sanitize.splitlines(keepends=True)
     # Separate prompt return lines (no >>> or ...) from prompt input lines
